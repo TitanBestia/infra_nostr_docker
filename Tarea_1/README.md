@@ -153,3 +153,23 @@ $ curl -H "Accept: application/nostr+json" http://localhost:8080
 
 El campo `description` confirma que el relay levantó con el `config.toml`
 montado desde el repositorio.
+
+### 3. Limpieza del entorno
+
+```console
+$ ./cleanup.sh
+[✓] 'nostr-client' eliminado.
+[✓] 'nostr-relay' eliminado.
+[✓] Red 'nostr-net' eliminada.
+
+$ docker ps -a
+NAMES     IMAGE     STATUS
+
+$ docker network ls
+NETWORK ID     NAME      DRIVER    SCOPE
+9cdae976c158   bridge    bridge    local
+afc64d7c9f18   host      host      local
+fa261722c296   none      null      local
+```
+
+El entorno volvió a su estado inicial.
