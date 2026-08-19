@@ -1,0 +1,33 @@
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# --- Linux ---
+*~
+.directory
+.Trash-*
+
+# --- Editores ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Datos generados por el relay ---
+# La base SQLite vive dentro del contenedor, pero si en algún momento
+# se monta un volumen local, no debe versionarse.
+data/
+*.db
+*.db-shm
+*.db-wal
+
+# --- Secretos / entorno ---
+.env
+.env.local
+*.pem
+*.key
+
+# --- Logs ---
+*.log
